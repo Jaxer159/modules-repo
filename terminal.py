@@ -123,8 +123,8 @@ class TerminalMod(loader.Module):
             await utils.answer(message, self.strings("no_cmd", message))
 
     async def neofetchcmd(self, message):
-        """Show system stats via neofetch"""
-        await self.run_command(message, "neofetch --stdout", RawMessageEditor(message, "neofetch --stdout",
+        """Отображает системную информацию"""
+        await self.run_command(message, 'if [ ! x"" = x"$DYNO" ]; then curl -sL https://github.com/dylanaraps/neofetch/raw/master/neofetch | bash /dev/stdin --stdout; else neofetch --stdout; fi', RawMessageEditor(message, 'if [ ! x"" = x"$DYNO" ]; then curl -sL https://github.com/dylanaraps/neofetch/raw/master/neofetch | bash /dev/stdin --stdout; else neofetch --stdout; fi',
                                                                               self.config, self.strings, message))
 
     async def uptimecmd(self, message):
