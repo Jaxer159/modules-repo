@@ -1,5 +1,6 @@
 admin_tools
 afk
+distort
 info
 notes
 purge
