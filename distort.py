@@ -17,12 +17,12 @@ async def d(message):
 		reply_message = await message.get_reply_message()
 		data = await check_media(reply_message)
 		if isinstance(data, bool):
-			await message.edit("Ответ должен быть на картинку!")
+			await message.edit("**Ответ должен быть на картинку!**")
 			return
 	else:
-		await message.edit("Ответ должен быть на картинку!")
+		await message.edit("**Ответ должен быть на картинку!**")
 		return
-	await message.edit("<b>Работаю...</b>")
+	await message.edit("**Работаю...**")
 	for distorted in glob.glob("distorted*"):
 		os.remove(distorted)
 	for findistorted in glob.glob("*/distorted*"):
@@ -40,7 +40,7 @@ async def d(message):
 	buf.name = f'image.png'
 	image.save(buf, 'PNG')
 	buf.seek(0)
-	await message.edit("<b>Отправляю...</b>")
+	await message.edit("**Отправляю...**")
 	await message.client.send_file(message.chat_id, buf, reply_to=reply_message.id)
 	await message.delete()
 	
