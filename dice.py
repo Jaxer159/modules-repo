@@ -26,7 +26,7 @@ logger = logging.getLogger(__name__)
 
 @loader.tds
 class DiceMod(loader.Module):
-    """Dice"""
+    """Игра в Кости"""
     strings = {"name": "Dice"}
 
     def __init__(self):
@@ -34,12 +34,12 @@ class DiceMod(loader.Module):
                                                               "🎲": [1, 2, 3, 4, 5, 6],
                                                               "🎯": [1, 2, 3, 4, 5, 6],
                                                               "🏀": [1, 2, 3, 4, 5]},
-                                          "Mapping of emoji to possible values")
+                                          "Отображение смайликов на возможные значения")
 
     @loader.unrestricted
     async def dicecmd(self, message):
-        """Rolls a die (optionally with the specified value)
-           .dice <emoji> <outcomes> <count>"""
+        """Бросает кубик (опционально с указанным значением)
+           .dice <смайлик> <результат> <количество>"""
         args = utils.get_args(message)
         if await self.allmodules.check_security(message, security.OWNER | security.SUDO):
             try:
