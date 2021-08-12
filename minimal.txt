@@ -3,7 +3,6 @@ afk
 distort
 info
 notes
-purge
 recentactions
 speedtest
 stickers
