@@ -15,7 +15,6 @@ misc
 memes
 nopm
 notes
-pmlog
 purge
 quicktype
 quotes
