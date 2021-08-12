@@ -27,6 +27,4 @@ tts
 typer
 urbandictionary
 userinfo
-weather
-xda
 yesno
