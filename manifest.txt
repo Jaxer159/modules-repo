@@ -14,7 +14,6 @@ misc
 memes
 nopm
 notes
-purge
 quicktype
 recentactions
 spam
