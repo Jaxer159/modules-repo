@@ -11,4 +11,3 @@ terminal
 translate
 typer
 userinfo
-weather
