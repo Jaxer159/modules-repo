@@ -24,15 +24,15 @@ logger = logging.getLogger(__name__)
 
 @loader.tds
 class SpamMod(loader.Module):
-    """Annoys people really effectively"""
+    """Очень эффективно раздражает людей"""
     strings = {"name": "Spam",
-               "need_spam": "<b>U wot? I need something to spam.</b>",
-               "spam_urself": "<b>Go spam urself.</b>",
-               "nice_number": "<b>Nice number bro.</b>",
-               "much_spam": "<b>Haha, much spam.</b>"}
+               "need_spam": "<b>Ты.. что? Мне нужно что-то для спама.</b>",
+               "spam_urself": "<b>Себя поспамь.</b>",
+               "nice_number": "<b>Хороший номер братан.</b>",
+               "much_spam": "<b>Хаха, как много спама.</b>"}
 
     async def spamcmd(self, message):
-        """.spam <count> <message>"""
+        """.spam <количество> <сообщение>"""
         use_reply = False
         args = utils.get_args(message)
         logger.debug(args)
